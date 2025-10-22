@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исламские Дуа</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-mosque"></i>
+                Исламские Дуа
+            </h1>
+            <div class="header-controls">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Поиск дуа..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" title="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="favorites-toggle" id="favorites-toggle" title="Показать избранные">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-th"></i>
+                    Все
+                </button>
+                <button class="category-btn" data-category="morning">
+                    <i class="fas fa-sun"></i>
+                    Утром
+                </button>
+                <button class="category-btn" data-category="evening">
+                    <i class="fas fa-moon"></i>
+                    Вечером
+                </button>
+                <button class="category-btn" data-category="protection">
+                    <i class="fas fa-shield-alt"></i>
+                    Защита
+                </button>
+                <button class="category-btn" data-category="health">
+                    <i class="fas fa-heartbeat"></i>
+                    Здоровье
+                </button>
+                <button class="category-btn" data-category="thanks">
+                    <i class="fas fa-hands-praying"></i>
+                    Благодарность
+                </button>
+                <button class="category-btn" data-category="istighfar">
+                    <i class="fas fa-pray"></i>
+                    Покаяние
+                </button>
+                <button class="category-btn" data-category="tasbih">
+                    <i class="fas fa-star"></i>
+                    Прославление
+                </button>
+            </div>
+            
+            <!-- Quick Access -->
+            <div class="quick-access">
+                <h3>Быстрый доступ</h3>
+                <div class="quick-buttons">
+                    <button class="quick-btn" id="daily-duas-btn">
+                        <i class="fas fa-calendar-day"></i>
+                        Ежедневные
+                    </button>
+                    <button class="quick-btn" id="emergency-duas-btn">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Экстренные
+                    </button>
+                    <button class="quick-btn" id="popular-duas-btn">
+                        <i class="fas fa-fire"></i>
+                        Популярные
+                    </button>
+                    <button class="quick-btn" id="short-duas-btn">
+                        <i class="fas fa-clock"></i>
+                        Короткие
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Duas List -->
+            <div class="duas-container">
+                <div class="dua-card" data-category="dua" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Duo Ismi A'zam</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Величайшее Имя Аллаха</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Allohuma inni asaluka bi anni ashxadu annaka antallox la ilaha ila ant al axadus somad allazi lam yalid valam yulad valam yakullaxu kufvan axad
+                        </div>
+                        <div class="translation">
+                            О Аллах, я прошу Тебя тем, что я свидетельствую, что Ты - Аллах, нет божества, кроме Тебя, Единый, Самодостаточный, Который не родил и не был рожден, и нет Ему равного
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Дуа перед сном</h3>
+                        <span class="dua-type">Перед сном</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Subhanallohi vallhamdulillahi Va laa ilaha illallohu Va Astagʻfirulloh Allohumma inniy As'aluka min fazlika Va Rohmatik Va innahuma bi yadik La yamlikuhuma ahadun sivaak
+                        </div>
+                        <div class="translation">
+                            Слава Аллаху, и хвала Аллаху, и нет божества, кроме Аллаха, и прошу прощения у Аллаха. О Аллах, я прошу Тебя о Твоей милости и благодати, и они в Твоей руке, никто не владеет ими, кроме Тебя
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Дуа после утренней молитвы</h3>
+                        <span class="dua-type">После Бомдод</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Alhamdulillahi Robbil 'alamiyn Ar-Rohmanir Rohiym Maliki yavmiddin , Laa ilaha illallohu yaf'alu ma yurid , Allohumma antal G'oniyyu va nahnul fuqaro
+                        </div>
+                        <div class="translation">
+                            Хвала Аллаху, Господу миров, Милостивому, Милосердному, Владыке Дня воздаяния. Нет божества, кроме Аллаха, Он делает то, что пожелает. О Аллах, Ты - Богатый, а мы - бедные
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Имена Аллаха</h3>
+                        <span class="dua-type">Прекрасные имена</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Allohuma - hu Malikum Sami'un Qadirun Karimun , Halimun Latifun Alimun Mu'inum Sadiqun
+                        </div>
+                        <div class="translation">
+                            Аллах - Он Владыка, Слышащий, Могущий, Щедрый, Терпеливый, Добрый, Знающий, Помогающий, Правдивый
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Дуа в четверг вечером</h3>
+                        <span class="dua-type">10,000 раз, 10 недель</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Ey Ya-G'oniy
+                        </div>
+                        <div class="translation">
+                            О Богатый
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Сура Аш-Шарх</h3>
+                        <span class="dua-type">В Тахаджуд намазе, 314 раз</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Alam nashrox
+                        </div>
+                        <div class="translation">
+                            Разве Мы не раскрыли тебе твою грудь?
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Новые добавления -->
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Дуа о прощении</h3>
+                        <span class="dua-type">Покаяние</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Astagʻfirullox va atubi illayx
+                        </div>
+                        <div class="translation">
+                            Прошу прощения у Аллаха и каюсь перед Ним
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Хадис о долгах</h3>
+                        <span class="dua-type">Ибн Маджа</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Кимки карз олиб уни кайтариш хакида уйламаса, Аллох хузуриг угри булиб боради
+                        </div>
+                        <div class="translation">
+                            Тот, кто берет в долг и не думает о том, как его вернуть, Аллах будет его врагом
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Мудрость о доверии</h3>
+                        <span class="dua-type">Мудрость</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Sometimes we don't have all the answers, we learn to trust Allah and hope for the best
+                        </div>
+                        <div class="translation">
+                            Иногда у нас нет всех ответов, мы учимся доверять Аллаху и надеяться на лучшее
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Совет Умара ибн Хаттаба</h3>
+                        <span class="dua-type">Мудрость</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Do not make decisions when you are angry, and do not make promises when you are happy
+                        </div>
+                        <div class="translation">
+                            Не принимай решений, когда ты в гневе, и не давай обещаний, когда ты счастлив
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Мудрость Имама Али</h3>
+                        <span class="dua-type">Мудрость</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Beautiful people aren't always good, but good people are always beautiful
+                        </div>
+                        <div class="translation">
+                            Красивые люди не всегда хорошие, но хорошие люди всегда красивые
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Аят из Корана</h3>
+                        <span class="dua-type">Зумар сураси, 9-оят</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            قُلْ هَلْ يَسْتَوِى ٱلَّذِينَ يَعْلَمُونَ وَٱلَّذِينَ لَا يَعْلَمُونَ إِنَّمَا يَتَذَكَّرُ أُوْلُواْ الْأَلْبَابِ
+                        </div>
+                        <div class="translation">
+                            Скажи: "Разве равны те, которые знают, и те, которые не знают?" Воистину, поминают назидание только обладающие разумом
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Хадис о знании</h3>
+                        <span class="dua-type">Муслим, Абу Дауд, Тирмизи</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Ким илм талаб килиш улига тушса, Аллох унга жаннатнинг йулини енгиллаштиради
+                        </div>
+                        <div class="translation">
+                            Тот, кто вступил на путь поиска знаний, Аллах облегчит ему путь в Рай
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card">
+                    <div class="dua-header">
+                        <h3>Мудрость о терпении</h3>
+                        <span class="dua-type">Хазрати Али р.а.</span>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            Vaqt uzoqlashsa ham, natija kechiksa ham, sabr qilgan inson albatta nasibasini oladi
+                        </div>
+                        <div class="translation">
+                            Даже если время затягивается, даже если результат запаздывает, терпеливый человек обязательно получит свою долю
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Утренние дуа -->
+                <div class="dua-card" data-category="morning" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Утреннее дуа</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Утром</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            اللهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ
+                        </div>
+                        <div class="translation">
+                            О Аллах, Твоим именем мы встретили утро, Твоим именем мы встретили вечер, Твоим именем мы живем, Твоим именем мы умираем, и к Тебе воскресение
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="evening" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Вечернее дуа</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Вечером</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            اللهُمَّ بِكَ أَمْسَيْنَا وَبِكَ أَصْبَحْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ الْمَصِيرُ
+                        </div>
+                        <div class="translation">
+                            О Аллах, Твоим именем мы встретили вечер, Твоим именем мы встретили утро, Твоим именем мы живем, Твоим именем мы умираем, и к Тебе возвращение
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="thanks" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Дуа благодарности (утром)</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Благодарность</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            اللهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ، فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ
+                        </div>
+                        <div class="translation">
+                            О Аллах, все блага, которые пришли ко мне утром, от Тебя Одного, у Которого нет сотоварища, Тебе хвала и благодарность
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="thanks" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Дуа благодарности (вечером)</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Благодарность</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            اللهُمَّ مَا أَمْسَى بِي مِنْ نِعْمَةٍ فَمِنْكَ وَحْدَكَ، لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ
+                        </div>
+                        <div class="translation">
+                            О Аллах, все блага, которые пришли ко мне вечером, от Тебя Одного, у Которого нет сотоварища, Тебе хвала и благодарность
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="protection" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Дуа от зла</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Защита</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ
+                        </div>
+                        <div class="translation">
+                            Прибегаю к совершенным словам Аллаха от зла того, что Он создал
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="protection" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Дуа для защиты от вреда</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Защита</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            بِاسْمِ اللهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاء وَهُوَ السَّمِيعُ العَلِيمُ
+                        </div>
+                        <div class="translation">
+                            Именем Аллаха, с Которым ничто на земле и на небе не может причинить вреда, Он - Слышащий, Знающий
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="health" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Дуа о здоровье</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Здоровье</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            اللهُمَّ عَافِنِي فِي بَدَنِي، اللهُمَّ عَافِنِي فِي سَمْعِي، اللهُمَّ عَافِنِي فِي بَصَرِي، لا إلَهَ إلاَّ أنْتَ. اللهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الكُفْرِ وَالفَقْرِ، اللهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ لاَ إِلَهَ إِلاَّ أَنْتَ
+                        </div>
+                        <div class="translation">
+                            О Аллах, дай мне здоровье в теле, О Аллах, дай мне здоровье в слухе, О Аллах, дай мне здоровье в зрении, нет божества, кроме Тебя. О Аллах, я прибегаю к Тебе от неверия и бедности, О Аллах, я прибегаю к Тебе от мучений могилы, нет божества, кроме Тебя
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="morning" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Утреннее дуа о дне</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Утром</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ للهِ رَبِّ العَالَمِينَ. اللهُمَّ أَسْأَلُكَ خَيْرَ هَذَا اليَوْمِ فَتْحَهُ وَنَصْرَهُ وَنُورَهُ وَبَرَكَتَهُ وَهُدَاهُ وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ
+                        </div>
+                        <div class="translation">
+                            Мы встретили утро, и власть принадлежит Аллаху, Господу миров. О Аллах, я прошу у Тебя блага этого дня, его открытия, победы, света, благословения и руководства, и прибегаю к Тебе от зла того, что в нем, и зла того, что после него
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="evening" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Вечернее дуа о ночи</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Вечером</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            أَمْسَيْنَا وَأَمْسَى الْمُلْكُ للهِ رَبِّ العَالَمِينَ. اللهُمَّ أَسْأَلُكَ خَيْرَ هَذِهِ اللَّيلَةِ، فَتْحَهُ وَنَصْرَهُ وَنُورَهُ وَبَرَكَتَهُ وَهُدَاهُ وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهَا، وَشَرِّ مَا بَعْدَهَا
+                        </div>
+                        <div class="translation">
+                            Мы встретили вечер, и власть принадлежит Аллаху, Господу миров. О Аллах, я прошу у Тебя блага этой ночи, ее открытия, победы, света, благословения и руководства, и прибегаю к Тебе от зла того, что в ней, и зла того, что после нее
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="tasbih" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Тасбих</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Прославление</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            سُبْحَانَ اللهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ، وَرِضَى نَفْسِهِ، وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ
+                        </div>
+                        <div class="translation">
+                            Преславен Аллах и хвала Ему по числу Его творений, по довольству Его души, по весу Его Трона и по чернилам Его слов
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dua-card" data-category="istighfar" data-favorite="false">
+                    <div class="dua-header">
+                        <h3>Саййидуль-истигфар</h3>
+                        <div class="dua-actions">
+                            <span class="dua-type">Покаяние</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dua-text">
+                        <div class="arabic-text">
+                            اللهُمَّ أَنْتَ رَبِّي، لاَ إِلَهَ إِلاَّ أَنْتَ خَلَقْتَنِي، وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ
+                        </div>
+                        <div class="translation">
+                            О Аллах, Ты - мой Господь, нет божества, кроме Тебя, Ты создал меня, а я - Твой раб, и я на Твоем завете и обещании, насколько я в силах. Прибегаю к Тебе от зла того, что я совершил, признаю Твою милость ко мне и признаю свой грех, прости меня, ибо никто не прощает грехи, кроме Тебя
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Баракятуллах фикум</p>
+            <div class="footer-stats">
+                <span id="total-duas">Всего дуа: 0</span>
+                <span id="favorite-count">Избранных: 0</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Текст скопирован!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
