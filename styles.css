@@ -158,9 +158,10 @@ body {
 
 .menu-categories {
     padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .menu-quick-access {
@@ -177,8 +178,9 @@ body {
 }
 
 .menu-quick-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
 }
 
@@ -186,19 +188,20 @@ body {
     background: #f8f9fa;
     border: 2px solid #e9ecef;
     border-radius: 15px;
-    padding: 10px 12px;
-    font-size: 0.8rem;
+    padding: 8px 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     color: #6c757d;
     display: flex;
     align-items: center;
-    gap: 8px;
-    width: 100%;
+    gap: 6px;
+    flex: 0 0 auto;
+    min-width: 80px;
     justify-content: center;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .category-btn:hover {
@@ -226,18 +229,19 @@ body {
     color: white;
     border: none;
     border-radius: 12px;
-    padding: 8px 10px;
-    font-size: 0.75rem;
+    padding: 6px 10px;
+    font-size: 0.7rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 6px;
-    width: 100%;
+    gap: 4px;
+    flex: 0 0 auto;
+    min-width: 70px;
     justify-content: center;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .quick-btn:hover {
@@ -505,29 +509,31 @@ body {
     }
     
     .menu-categories {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        flex-direction: row;
+        gap: 6px;
     }
     
     .menu-quick-buttons {
-        grid-template-columns: 1fr;
+        flex-direction: row;
         gap: 6px;
     }
     
     .category-btn {
         flex-direction: row;
-        justify-content: flex-start;
-        text-align: left;
-        padding: 12px 15px;
-        font-size: 0.9rem;
+        justify-content: center;
+        text-align: center;
+        padding: 8px 10px;
+        font-size: 0.7rem;
+        min-width: 60px;
     }
     
     .quick-btn {
         flex-direction: row;
-        justify-content: flex-start;
-        text-align: left;
-        padding: 10px 15px;
-        font-size: 0.8rem;
+        justify-content: center;
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 0.65rem;
+        min-width: 50px;
     }
     
     .dua-actions {
