@@ -158,8 +158,8 @@ body {
 
 .menu-categories {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
 
@@ -177,34 +177,35 @@ body {
 }
 
 .menu-quick-buttons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
 }
 
 .category-btn {
     background: #f8f9fa;
     border: 2px solid #e9ecef;
-    border-radius: 25px;
-    padding: 12px 20px;
-    font-size: 0.9rem;
+    border-radius: 15px;
+    padding: 10px 12px;
+    font-size: 0.8rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     color: #6c757d;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     width: 100%;
-    justify-content: flex-start;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .category-btn:hover {
     background: #27ae60;
     color: white;
     border-color: #27ae60;
-    transform: translateX(5px);
+    transform: scale(1.05);
 }
 
 .category-btn.active {
@@ -224,27 +225,28 @@ body {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     border: none;
-    border-radius: 15px;
-    padding: 10px 15px;
-    font-size: 0.85rem;
+    border-radius: 12px;
+    padding: 8px 10px;
+    font-size: 0.75rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     width: 100%;
-    justify-content: flex-start;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .quick-btn:hover {
-    transform: translateX(5px);
+    transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .quick-btn i {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 /* Main Content */
@@ -502,12 +504,29 @@ body {
         right: -100%;
     }
     
+    .menu-categories {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
     .menu-quick-buttons {
+        grid-template-columns: 1fr;
         gap: 6px;
     }
     
+    .category-btn {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
     .quick-btn {
-        padding: 8px 12px;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 10px 15px;
         font-size: 0.8rem;
     }
     
