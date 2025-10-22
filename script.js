@@ -25,9 +25,16 @@ class IslamicDuasApp {
         // Search
         document.getElementById('search-input').addEventListener('input', (e) => this.search(e.target.value));
         
+        // Burger menu
+        document.getElementById('burger-menu').addEventListener('click', () => this.toggleBurgerMenu());
+        document.getElementById('close-menu').addEventListener('click', () => this.closeBurgerMenu());
+        
         // Category filters
         document.querySelectorAll('.category-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => this.filterByCategory(e.target.dataset.category));
+            btn.addEventListener('click', (e) => {
+                this.filterByCategory(e.target.dataset.category);
+                this.closeBurgerMenu();
+            });
         });
         
         // Quick access buttons
@@ -263,6 +270,17 @@ class IslamicDuasApp {
             card.style.display = isShort ? 'block' : 'none';
         });
         this.showToast('Короткие дуа для быстрого чтения');
+    }
+
+    // Burger menu functions
+    toggleBurgerMenu() {
+        const menu = document.getElementById('burger-menu-content');
+        menu.classList.toggle('show');
+    }
+
+    closeBurgerMenu() {
+        const menu = document.getElementById('burger-menu-content');
+        menu.classList.remove('show');
     }
 }
 

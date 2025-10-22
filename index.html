@@ -21,6 +21,9 @@
                     <input type="text" id="search-input" placeholder="Поиск дуа..." class="search-input">
                     <i class="fas fa-search search-icon"></i>
                 </div>
+                <button class="burger-menu" id="burger-menu" title="Меню категорий">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <button class="theme-toggle" id="theme-toggle" title="Переключить тему">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -29,40 +32,48 @@
                 </button>
             </div>
             
-            <!-- Category Filters -->
-            <div class="category-filters">
-                <button class="category-btn active" data-category="all">
-                    <i class="fas fa-th"></i>
-                    Все
-                </button>
-                <button class="category-btn" data-category="morning">
-                    <i class="fas fa-sun"></i>
-                    Утром
-                </button>
-                <button class="category-btn" data-category="evening">
-                    <i class="fas fa-moon"></i>
-                    Вечером
-                </button>
-                <button class="category-btn" data-category="protection">
-                    <i class="fas fa-shield-alt"></i>
-                    Защита
-                </button>
-                <button class="category-btn" data-category="health">
-                    <i class="fas fa-heartbeat"></i>
-                    Здоровье
-                </button>
-                <button class="category-btn" data-category="thanks">
-                    <i class="fas fa-hands-praying"></i>
-                    Благодарность
-                </button>
-                <button class="category-btn" data-category="istighfar">
-                    <i class="fas fa-pray"></i>
-                    Покаяние
-                </button>
-                <button class="category-btn" data-category="tasbih">
-                    <i class="fas fa-star"></i>
-                    Прославление
-                </button>
+            <!-- Burger Menu -->
+            <div class="burger-menu-content" id="burger-menu-content">
+                <div class="menu-header">
+                    <h3>Категории дуа</h3>
+                    <button class="close-menu" id="close-menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fas fa-th"></i>
+                        Все дуа
+                    </button>
+                    <button class="category-btn" data-category="morning">
+                        <i class="fas fa-sun"></i>
+                        Утром
+                    </button>
+                    <button class="category-btn" data-category="evening">
+                        <i class="fas fa-moon"></i>
+                        Вечером
+                    </button>
+                    <button class="category-btn" data-category="protection">
+                        <i class="fas fa-shield-alt"></i>
+                        Защита
+                    </button>
+                    <button class="category-btn" data-category="health">
+                        <i class="fas fa-heartbeat"></i>
+                        Здоровье
+                    </button>
+                    <button class="category-btn" data-category="thanks">
+                        <i class="fas fa-hands-praying"></i>
+                        Благодарность
+                    </button>
+                    <button class="category-btn" data-category="istighfar">
+                        <i class="fas fa-pray"></i>
+                        Покаяние
+                    </button>
+                    <button class="category-btn" data-category="tasbih">
+                        <i class="fas fa-star"></i>
+                        Прославление
+                    </button>
+                </div>
             </div>
             
             <!-- Quick Access -->
