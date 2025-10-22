@@ -74,28 +74,28 @@
                         Прославление
                     </button>
                 </div>
-            </div>
-            
-            <!-- Quick Access -->
-            <div class="quick-access">
-                <h3>Быстрый доступ</h3>
-                <div class="quick-buttons">
-                    <button class="quick-btn" id="daily-duas-btn">
-                        <i class="fas fa-calendar-day"></i>
-                        Ежедневные
-                    </button>
-                    <button class="quick-btn" id="emergency-duas-btn">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Экстренные
-                    </button>
-                    <button class="quick-btn" id="popular-duas-btn">
-                        <i class="fas fa-fire"></i>
-                        Популярные
-                    </button>
-                    <button class="quick-btn" id="short-duas-btn">
-                        <i class="fas fa-clock"></i>
-                        Короткие
-                    </button>
+                
+                <!-- Quick Access in Menu -->
+                <div class="menu-quick-access">
+                    <h4>Быстрый доступ</h4>
+                    <div class="menu-quick-buttons">
+                        <button class="quick-btn" id="daily-duas-btn">
+                            <i class="fas fa-calendar-day"></i>
+                            Ежедневные
+                        </button>
+                        <button class="quick-btn" id="emergency-duas-btn">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Экстренные
+                        </button>
+                        <button class="quick-btn" id="popular-duas-btn">
+                            <i class="fas fa-fire"></i>
+                            Популярные
+                        </button>
+                        <button class="quick-btn" id="short-duas-btn">
+                            <i class="fas fa-clock"></i>
+                            Короткие
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
@@ -127,10 +127,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="evening" data-favorite="false">
                     <div class="dua-header">
                         <h3>Дуа перед сном</h3>
-                        <span class="dua-type">Перед сном</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Перед сном</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -142,10 +150,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="morning" data-favorite="false">
                     <div class="dua-header">
                         <h3>Дуа после утренней молитвы</h3>
-                        <span class="dua-type">После Бомдод</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">После Бомдод</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -157,10 +173,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="tasbih" data-favorite="false">
                     <div class="dua-header">
                         <h3>Имена Аллаха</h3>
-                        <span class="dua-type">Прекрасные имена</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Прекрасные имена</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -172,10 +196,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="evening" data-favorite="false">
                     <div class="dua-header">
                         <h3>Дуа в четверг вечером</h3>
-                        <span class="dua-type">10,000 раз, 10 недель</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">10,000 раз, 10 недель</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -187,10 +219,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="tasbih" data-favorite="false">
                     <div class="dua-header">
                         <h3>Сура Аш-Шарх</h3>
-                        <span class="dua-type">В Тахаджуд намазе, 314 раз</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">В Тахаджуд намазе, 314 раз</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -203,10 +243,18 @@
                 </div>
 
                 <!-- Новые добавления -->
-                <div class="dua-card">
+                <div class="dua-card" data-category="istighfar" data-favorite="false">
                     <div class="dua-header">
                         <h3>Дуа о прощении</h3>
-                        <span class="dua-type">Покаяние</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Покаяние</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -218,10 +266,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="wisdom" data-favorite="false">
                     <div class="dua-header">
                         <h3>Хадис о долгах</h3>
-                        <span class="dua-type">Ибн Маджа</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Ибн Маджа</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -233,10 +289,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="wisdom" data-favorite="false">
                     <div class="dua-header">
                         <h3>Мудрость о доверии</h3>
-                        <span class="dua-type">Мудрость</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Мудрость</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -248,10 +312,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="wisdom" data-favorite="false">
                     <div class="dua-header">
                         <h3>Совет Умара ибн Хаттаба</h3>
-                        <span class="dua-type">Мудрость</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Мудрость</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -263,10 +335,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="wisdom" data-favorite="false">
                     <div class="dua-header">
                         <h3>Мудрость Имама Али</h3>
-                        <span class="dua-type">Мудрость</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Мудрость</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -278,10 +358,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="quran" data-favorite="false">
                     <div class="dua-header">
                         <h3>Аят из Корана</h3>
-                        <span class="dua-type">Зумар сураси, 9-оят</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Зумар сураси, 9-оят</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -293,10 +381,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="hadith" data-favorite="false">
                     <div class="dua-header">
                         <h3>Хадис о знании</h3>
-                        <span class="dua-type">Муслим, Абу Дауд, Тирмизи</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Муслим, Абу Дауд, Тирмизи</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">
@@ -308,10 +404,18 @@
                     </div>
                 </div>
 
-                <div class="dua-card">
+                <div class="dua-card" data-category="wisdom" data-favorite="false">
                     <div class="dua-header">
                         <h3>Мудрость о терпении</h3>
-                        <span class="dua-type">Хазрати Али р.а.</span>
+                        <div class="dua-actions">
+                            <span class="dua-type">Хазрати Али р.а.</span>
+                            <button class="favorite-btn" title="Добавить в избранное">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="copy-btn" title="Копировать">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="dua-text">
                         <div class="arabic-text">

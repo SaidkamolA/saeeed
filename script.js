@@ -38,10 +38,22 @@ class IslamicDuasApp {
         });
         
         // Quick access buttons
-        document.getElementById('daily-duas-btn').addEventListener('click', () => this.showDailyDuas());
-        document.getElementById('emergency-duas-btn').addEventListener('click', () => this.showEmergencyDuas());
-        document.getElementById('popular-duas-btn').addEventListener('click', () => this.showPopularDuas());
-        document.getElementById('short-duas-btn').addEventListener('click', () => this.showShortDuas());
+        document.getElementById('daily-duas-btn').addEventListener('click', () => {
+            this.showDailyDuas();
+            this.closeBurgerMenu();
+        });
+        document.getElementById('emergency-duas-btn').addEventListener('click', () => {
+            this.showEmergencyDuas();
+            this.closeBurgerMenu();
+        });
+        document.getElementById('popular-duas-btn').addEventListener('click', () => {
+            this.showPopularDuas();
+            this.closeBurgerMenu();
+        });
+        document.getElementById('short-duas-btn').addEventListener('click', () => {
+            this.showShortDuas();
+            this.closeBurgerMenu();
+        });
         
         // Copy buttons
         document.addEventListener('click', (e) => {
